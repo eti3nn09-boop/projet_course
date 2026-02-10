@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #667, #764ba2);
+    background: linear-gradient(135deg, #0C27C6, #7B099A);
     font-family: Arial, sans-serif;
 }
 
@@ -23,25 +23,49 @@ body {
 
 h1 { 
     margin-bottom: 25px;
-    color: #333;
+    color: white;
 }
 button {
-    background: #667eea;
+    background: #1E3BD9;
     color: white;
     padding: 16px 28px;
     font-size: 18px;
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.2s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     touch-action: manipulation;
 }
 
-button:hower {
-    background: #5a37b8;
-    transform: translateY(-2px);
-}
 
 button:active {
     transform: scale(0.95);
+}
+
+.car {
+    position: relative;
+    width: 200px;
+    margin: 40px auto;
+}
+
+.phare {
+    width: 30px;
+    height: 30px;
+    background-color: #444;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transition: all 0.3 ease;
+}
+
+.phare.gauche {
+    left: 20px;
+}
+
+.phare.droit {
+    right: 20px;
+}
+
+.phare.on {
+    background: yellow;
+    box-shadow: 0 0 20px 10px RGBA(255, 255, 150, 0.8);
 }
