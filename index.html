@@ -27,13 +27,26 @@
 
   <h1>Projet course en cours</h1>
   
-  <button onclick="klaxon()">klaxon</button>
-  
+  <!-- problème audio avec klaxon --> 
+  <button onclick="jouerSon('klaxon')">Klaxon</button>
+  <button onclick="jouerSon('klaxon_tgv')">Klaxon TGV</button>
+  <button id="phare">allumer les phare</button>
+
+
   <audio id="klaxon" preload="auto">
-    <source src="klaxon.mp3" type="audio/mpeg">
-    l'app ne supporte pas l'audio.
+    <source src="klaxon.mp3"type="audio/mpeg">
   </audio>
-  
+    
+    
+  <audio id="klaxon_tgv" preload="auto">
+    <source src="klaxon_tgv.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="car">
+    <div class="phare gauche"></div>
+    <div class="phare droit"></div>
+  </div>
+
   <script src="main.js"></script>
 </body>
-</html>
+</html> 
