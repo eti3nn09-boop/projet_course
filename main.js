@@ -1,7 +1,31 @@
-function klaxon() {
-  const audio = document.getElementById("klaxon");
+function jouerSon(id) {
+  const audio = document.getElementById(id);
+  
+  if (!audio) {
+    alert("Audio introuvable : " + id);
+    return;
+  }
+  
   audio.currentTime = 0;
-  audio.play();
+  audio.play()
+    .then(() => console.log("Son joué :", id))
+    .catch(err => alert("Erreur audio : " + err));
 }
+window.addEventListener("DOMContentLoaded", () => { 
 
-navigator.vibrate(50);
+  const button = document.getElementById("phare");
+  const phare = document.querySelectorAll(".phare");
+  let allume = false;
+
+  button.addEventListener("click", () => {
+        allume = !allume;
+        
+        phares.forEach(phare => {
+          phare.classList.toggle("on", allume);
+        });
+    
+        button.textContent = allume ? "Eteindre les phares" : "allumer lees phares";
+  });
+});
+console.log("script chargé");
+
